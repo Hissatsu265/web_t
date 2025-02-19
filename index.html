@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá Du lịch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: #fff;
+            color: #ff7e5f;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #feb47b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌍 Khám phá Du lịch</h1>
+    <p>Hãy cùng chúng tôi khám phá những điểm đến tuyệt vời!</p>
+
+    <div class="container">
+        <div class="card">
+            <h2>Hạ Long Bay, Việt Nam</h2>
+            <img src="https://source.unsplash.com/800x400/?halong" alt="Hạ Long Bay">
+            <p>Di sản thiên nhiên thế giới với những hòn đảo đá vôi tuyệt đẹp.</p>
+            <button class="btn" onclick="showDetails('Hạ Long Bay')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+            <h2>Paris, Pháp</h2>
+            <img src="https://source.unsplash.com/800x400/?paris" alt="Paris">
+            <p>Thành phố lãng mạn với tháp Eiffel nổi tiếng.</p>
+            <button class="btn" onclick="showDetails('Paris')">Xem chi tiết</button>
+        </div>
+
+        <div class="card">
+            <h2>Kyoto, Nhật Bản</h2>
+            <img src="https://source.unsplash.com/800x400/?kyoto" alt="Kyoto">
+            <p>Nơi lưu giữ tinh hoa văn hóa Nhật Bản với đền chùa và hoa anh đào.</p>
+            <button class="btn" onclick="showDetails('Kyoto')">Xem chi tiết</button>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(location) {
+            alert("Bạn đã chọn " + location + "! Hãy chuẩn bị hành trình của mình.");
+        }
+    </script>
+
+</body>
+</html>
