@@ -3,103 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Modern Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s forwards;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s 0.3s forwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #2193b0;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s 0.6s forwards;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .floating-shapes div {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.1);
+            animation: float 15s linear infinite;
+        }
+
+        .floating-shapes div:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .floating-shapes div:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 3s;
+            width: 80px;
+            height: 80px;
+        }
+
+        .floating-shapes div:nth-child(3) {
+            top: 40%;
+            left: 40%;
+            animation-delay: 5s;
+            width: 100px;
+            height: 100px;
+        }
+
+        .floating-shapes div:nth-child(4) {
+            top: 80%;
+            left: 60%;
+            animation-delay: 7s;
+            width: 50px;
+            height: 50px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">Brand</div>
-        <ul class="nav-links">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    <section class="hero">
+        <div class="floating-shapes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Chào mừng đến với Website của chúng tôi</h1>
-            <p>Khám phá những điều tuyệt vời cùng chúng tôi</p>
-            <button class="cta-button">Tìm hiểu thêm</button>
+        <div class="content">
+            <h1>Chào Mừng Đến Với Trang Web Của Chúng Tôi</h1>
+            <p>Khám phá những điều tuyệt vời đang chờ đợi bạn</p>
+            <a href="#" class="btn">Bắt Đầu Ngay</a>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>Về chúng tôi</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Chúng tôi là một công ty chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực...</p>
-                <p>Sứ mệnh của chúng tôi là mang đến những giải pháp tốt nhất cho khách hàng.</p>
-            </div>
-            <div class="about-image">
-                <img src="/api/placeholder/500/300" alt="About Us">
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Thiết kế Web</h3>
-                <p>Thiết kế website chuyên nghiệp, responsive</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Phát triển Ứng dụng</h3>
-                <p>Phát triển ứng dụng di động đa nền tảng</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-search"></i>
-                <h3>SEO</h3>
-                <p>Tối ưu hóa công cụ tìm kiếm</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Liên hệ với chúng tôi</h2>
-        <div class="contact-form">
-            <form id="contactForm">
-                <input type="text" placeholder="Họ và tên" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Nội dung tin nhắn" required></textarea>
-                <button type="submit">Gửi tin nhắn</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Thông tin liên hệ</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
-            </div>
-            <div class="footer-section">
-                <h4>Theo dõi chúng tôi</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const shapes = document.querySelectorAll('.floating-shapes div');
+            
+            shapes.forEach(shape => {
+                shape.style.left = Math.random() * 100 + '%';
+                shape.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            });
+        });
+    </script>
 </body>
 </html>
