@@ -3,102 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khám phá Du lịch</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .btn {
-            background: #fff;
-            color: #ff7e5f;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-size: 1em;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #feb47b;
-            color: #fff;
-        }
-    </style>
+    <title>Modern Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <h1>🌍 Khám phá Du lịch</h1>
-    <p>Hãy cùng chúng tôi khám phá những điểm đến tuyệt vời!</p>
-
-    <div class="container">
-        <div class="card">
-            <h2>Hạ Long Bay, Việt Nam</h2>
-            <img src="https://source.unsplash.com/800x400/?halong" alt="Hạ Long Bay">
-            <p>Di sản thiên nhiên thế giới với những hòn đảo đá vôi tuyệt đẹp.</p>
-            <button class="btn" onclick="showDetails('Hạ Long Bay')">Xem chi tiết</button>
+    <nav>
+        <div class="logo">Brand</div>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
         </div>
+    </nav>
 
-        <div class="card">
-            <h2>Paris, Pháp</h2>
-            <img src="https://source.unsplash.com/800x400/?paris" alt="Paris">
-            <p>Thành phố lãng mạn với tháp Eiffel nổi tiếng.</p>
-            <button class="btn" onclick="showDetails('Paris')">Xem chi tiết</button>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Chào mừng đến với Website của chúng tôi</h1>
+            <p>Khám phá những điều tuyệt vời cùng chúng tôi</p>
+            <button class="cta-button">Tìm hiểu thêm</button>
         </div>
+    </section>
 
-        <div class="card">
-            <h2>Kyoto, Nhật Bản</h2>
-            <img src="https://source.unsplash.com/800x400/?kyoto" alt="Kyoto">
-            <p>Nơi lưu giữ tinh hoa văn hóa Nhật Bản với đền chùa và hoa anh đào.</p>
-            <button class="btn" onclick="showDetails('Kyoto')">Xem chi tiết</button>
+    <section id="about" class="about">
+        <h2>Về chúng tôi</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Chúng tôi là một công ty chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực...</p>
+                <p>Sứ mệnh của chúng tôi là mang đến những giải pháp tốt nhất cho khách hàng.</p>
+            </div>
+            <div class="about-image">
+                <img src="/api/placeholder/500/300" alt="About Us">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function showDetails(location) {
-            alert("Bạn đã chọn " + location + "! Hãy chuẩn bị hành trình của mình.");
-        }
-    </script>
+    <section id="services" class="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Thiết kế Web</h3>
+                <p>Thiết kế website chuyên nghiệp, responsive</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Phát triển Ứng dụng</h3>
+                <p>Phát triển ứng dụng di động đa nền tảng</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p>Tối ưu hóa công cụ tìm kiếm</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="contact">
+        <h2>Liên hệ với chúng tôi</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" placeholder="Họ và tên" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Nội dung tin nhắn" required></textarea>
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Thông tin liên hệ</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+            </div>
+            <div class="footer-section">
+                <h4>Theo dõi chúng tôi</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
