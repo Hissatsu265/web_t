@@ -6,8 +6,9 @@ class Stock {
     public float $close;
     public string $ticker;
     
-
+// gdfgf
     public function __construct(string $ticker, float $open, float $high, float $low, float $close) {
+        
         $this->ticker = $ticker;
         $this->open = $open;
         $this->high = $high;
@@ -41,5 +42,6 @@ class StockManager {
 }
 
 // Sử dụng chương trình
+$manager = new StockManager();
 $manager = new StockManager();
 $manager->addStock(new Stock("AAPL", 175.2, 180.0, 174.5
