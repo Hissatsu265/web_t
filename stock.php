@@ -4,6 +4,8 @@ class Stock {
     public float $high;
     public float $low;
     public float $close;
+    public string $ticker;
+    
 
     public function __construct(string $ticker, float $open, float $high, float $low, float $close) {
         $this->ticker = $ticker;
