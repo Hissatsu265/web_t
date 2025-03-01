@@ -1,6 +1,5 @@
 <?php
 class Stock {
-    public string $ticker;
     public float $open;
     public float $high;
     public float $low;
