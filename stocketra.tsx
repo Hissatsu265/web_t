@@ -10,6 +10,7 @@ interface Stock {
   high: number;
   low: number;
   close: number;
+  id:string;
 }
 
 export default function StockDashboard() {
