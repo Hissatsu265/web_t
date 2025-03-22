@@ -11,7 +11,6 @@ interface Stock {
   high: number;
   low: number;
   close: number;
-  id:string;
 }
 export default function StockDashboard() {
   const [stocks, setStocks] = useState<Stock[]>([
