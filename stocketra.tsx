@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 
+interface Stock {
+  ticker: string;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  id:string;
+}
 export default function StockDashboard() {
   const [stocks, setStocks] = useState<Stock[]>([
     { ticker: "AAPL", open: 175.2, high: 180.0, low: 174.5, close: 179.8 },
