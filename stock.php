@@ -5,7 +5,7 @@ class Stock {
     public float $low;
     public float $close;
     public string $ticker;
-    
+    public string $ticker;
 // gdfgf
     public function __construct(string $ticker, float $open, float $high, float $low, float $close) {
         
