@@ -1,10 +1,6 @@
 <?php
 class Stock {
-    public float $open;
-    public float $high;
-    public float $low;
-    public float $close;
-    public string $ticker;
+ 
     
 // gdfgf
     public function __construct(string $ticker, float $open, float $high, float $low, float $close) {
