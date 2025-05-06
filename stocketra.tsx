@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 
+import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Stock {
   ticker: string;
